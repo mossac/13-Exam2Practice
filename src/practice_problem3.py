@@ -3,8 +3,8 @@ PRACTICE Exam 2, practice_problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Aidan Moss.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -173,13 +173,22 @@ def practice_problem3a(circles):
       :type sequence: [rg.Circle]
     """
     ###########################################################################
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ###########################################################################
+    total = 1
+    if len(circles) == 0:
+        return 1
+    else:
+        for k in range(len(circles)):
+           total =total * circles[k].center.x
+        return total
+
+
 
 
 def run_test_practice_problem3b():
@@ -342,7 +351,7 @@ def practice_problem3b(sequence):
       :type: sequence: list    or tuple or string
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:  You are NOT allowed to use the
@@ -354,6 +363,11 @@ def practice_problem3b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ###########################################################################
+    x = sequence[len(sequence)]
+    for k in range(len(sequence)):
+        if sequence[k] is x:
+            return True
+    return False
 
 
 def run_test_practice_problem3c():
